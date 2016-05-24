@@ -26,7 +26,6 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="css/avgrund.css">
     <link rel="stylesheet" href="css/styles.css">
 
     <!--Let browser know website is optimized for mobile-->
@@ -34,33 +33,43 @@
 </head>
 
 <body>
-    <main>
+    <nav class="blue-grey darken-2">
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo center ">Le roi et l'oiseau : Le roi</a>
+        </div>
+    </nav>
+    <main class="container">
         <div class="row">
         </div>
-        <div class="row title_space">
-            <div class="col m4 offset-m1">
-                <a href="roi.html"><img class="responsive-img" data-alt-src="images/Couronne_white.png" src="images/Couronne.png"></a>
+        <div class="row">
+            <div class="col s12 m3 l3 center-on-small-only">
+                <div class="image-container">
+                    <img class="circle responsive-img" src="images/membres/le_roi.jpg">
+                </div>
             </div>
-            <div class="col m4 offset-m2">
-                <a href="oiseau.html"><img class="responsive-img" data-alt-src="images/oiseau_white.png" src="images/oiseau.png"></a>
+            <div class="col s12 m9 l9">
+                <h4 id="nomOrganisateur">Le ramoneur</h4>
+                <p>
+                    Jeune garçon enduit de suie et aux vêtements déguenillés doué d’un charme fou. Ce Gavroche qui n’a qu’un rêve : folâtrer dans les près avec la jolie bergère. Brutalement l’oppression du cruel et malfaisant Roi va bouleverser sa passion. Dans sa quête d’amour, il sera accompagné par son fidèle ami, l’Oiseau, qui le prendra sous son aile. En sortira-t-il vainqueur ?
+                    <br/>
+                    <i>Joué par <b>Baptiste Lestrade</b></i>
+                </p>
             </div>
         </div>
         <div class="row">
-            <div class="col m4 offset-m1 center-align">
-                <h2>Le roi</h2>
+            <div class="col s12 m9 l9">
+                <h4 class="right-align" id="nomOrganisateur">La bergère</h4>
+                <p class="right-align">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    <br/>
+                    <i>Joué par <b>Olivier Nguyen</b></i>
+                </p>
             </div>
-            <div class="col m2 center-align">
-                <h2>et</h2>
+            <div class="col s12 m3 l3 center-on-small-only">
+                <div class="image-container">
+                    <img class="circle responsive-img" src="images/membres/le_roi.jpg">
+                </div>
             </div>
-            <div class="col m4 center-align">
-                <h2>l'oiseau</h2>
-            </div>
-        </div>
-        <div class="row title_space container center-align">
-            <h4 class="title_space">Le 01 et 06 Juin à l'ESSEC (GA) et le 08 Juin à Paris</h4>
-        </div>
-        <div class="row container right-align">
-                <p><b>Un texte de Jacques Prévert</b><br/>adapté et mis en scène par Margot Vieux</p>
         </div>
     </main>
     <footer class="page-footer blue-grey">
@@ -75,31 +84,6 @@
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/jquery.avgrund.min.js"></script>
-    <script>
-        var sourceSwap = function () {
-            var $this = $(this);
-            var newSource = $this.data('alt-src');
-            $this.data('alt-src', $this.attr('src'));
-            $this.attr('src', newSource);
-        }
-
-        $(function() {
-            $('img[data-alt-src]').each(function() { 
-                new Image().src = $(this).data('alt-src'); 
-            }).hover(sourceSwap, sourceSwap); 
-        });
-
-        $(document).avgrund({
-            height: 240,
-            holderClass: 'custom',
-            onBlurContainer: '.container',
-            showClose: true,
-            showCloseText: 'close',
-            openOnEvent: false,
-            template: '<h4>Ceci est une expérience musical !</h4> <div class="row"> <div class="col s3"><img class="responsive-img" src="images/music.jpg"></div> <div class="col s1"></div> <div class="col s8">DESACTIVER le son si vous êtes en publique (ou en cours ^^) ou mettez un casque. <br/><br/><b>Bon spectable !</b> </div> </div>' 
-        });
-    </script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
 
 </body>

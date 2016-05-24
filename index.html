@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    <main>
+    <main class="blue-grey lighten-5">
         <nav class="blue-grey darken-2">
             <div class="nav-wrapper">
                 <a href="#!" class="brand-logo center ">Le roi et l'oiseau : Choisis ton camp</a>
@@ -78,7 +78,7 @@
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/jquery.avgrund.min.js"></script>
+
     <script>
         var sourceSwap = function () {
             var $this = $(this);
@@ -92,7 +92,11 @@
                 new Image().src = $(this).data('alt-src'); 
             }).hover(sourceSwap, sourceSwap); 
         });
+    </script>
+<!--     
+    <script src="js/jquery.avgrund.min.js"></script>
 
+    <script>
         $(document).avgrund({
             height: 240,
             holderClass: 'custom',
@@ -102,7 +106,7 @@
             openOnEvent: false,
             template: '<h4>Ceci est une expérience musical !</h4> <div class="row"> <div class="col s3"><img class="responsive-img" src="images/music.jpg"></div> <div class="col s1"></div> <div class="col s8">DESACTIVER le son si vous êtes en publique (ou en cours ^^) ou mettez un casque. <br/><br/><b>Bon spectable !</b> </div> </div>' 
         });
-    </script>
+    </script> -->
     <script type="text/javascript" src="js/materialize.min.js"></script>
 
 </body>
