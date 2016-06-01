@@ -8,15 +8,16 @@
     <title>Le roi et l'oiseau</title>
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+    <link rel="icon" sizes="192x192" href="images/favicon.png">
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon.png">
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
+    <meta property="og:image" content="http://www.lesoiseauxcomedia.fr/images/fb-preview.jpg" />
     <link rel="shortcut icon" href="images/favicon.png">
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
@@ -25,17 +26,24 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="css/styles.css">
-
     <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <nav class="blue-grey darken-2">
-        <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo center ">Le roi et l'oiseau : Le roi</a>
+    <nav class="blue-grey darken-2" role="navigation">
+        <div class="nav-wrapper container"><a href="index.html" class="brand-logo">Le roi et l'oiseau</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="oiseau.html">L'oiseau</a></li>
+                <li><a href="critiques.html">Critiques</a></li>
+            </ul>
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="oiseau.html">L'oiseau</a></li>
+                <li><a href="critiques.html">Critiques</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
     </nav>
     <main class="container">
@@ -44,13 +52,13 @@
         <div class="row">
             <div class="col s12 m3 l3 center-on-small-only">
                 <div class="image-container">
-                    <img class="circle responsive-img" src="images/membres/le_roi.jpg">
+                    <img class="circle responsive-img" src="images/membres/roi.jpg">
                 </div>
             </div>
             <div class="col s12 m9 l9">
                 <h4 id="nomOrganisateur">Le roi</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Il est le Roi et il aime à le rappeler sans cesse à ses très modestes sujets. Fan de chasse, armes à feu, et autres spectacles sanglants, c’est aussi un grand lecteur de contes en tous genres (enfin de ceux où les rois épousent les bergères …). Certains l’appellent tyran, d’autre dictateur sans cœur, mais c’est d’abord un grand homme comme il y en a peu, follement épris d’une bergère et chargé par la providence de prendre soin d’un peuple ingrat qui ne mérite pas sa bienveillance et sa générosité.
                     <br/>
                     <i>Joué par <b>Baptiste Lestrade</b></i>
                 </p>
@@ -60,16 +68,91 @@
             <div class="col s12 m9 l9">
                 <h4 class="right-align" id="nomOrganisateur">Le chef de la police</h4>
                 <p class="right-align">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Chef de la police, il est un exécutant du roi. Il ne sait pas vraiment ce qui le pousse à prendre ses décisions, mais il a choisi de se ranger du côté du pouvoir en espérant avoir une vie tranquille. Cependant, dans cet univers plein de dangers et de pièges, il est, à son grand malheur, très souvent sollicité pour faire régner l'ordre et suivre des instructions contraires à ses valeurs les plus profondes.
                     <br/>
                     <i>Joué par <b>Olivier Nguyen</b></i>
                 </p>
             </div>
             <div class="col s12 m3 l3 center-on-small-only">
                 <div class="image-container">
-                    <img class="circle responsive-img" src="images/membres/le_roi.jpg">
+                    <img class="circle responsive-img" src="images/membres/police.jpg">
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m3 l3 center-on-small-only">
+                <div class="image-container">
+                    <img class="circle responsive-img" src="images/membres/statue.jpg">
+                </div>
+            </div>
+            <div class="col s12 m9 l9">
+                <h4 id="nomOrganisateur">La statue</h4>
+                <p>
+                    Un homme d’un autre temps, son monde idéal n’existe que dans les pages des livres de contes. Or, ici-bas, il semblerait que non seulement personne n’obéit à la loi sacrée du destin, mais que lui-même n’a pas la place de vieux sage qu’il ambitionne.
+                    <br/>
+                    <i>Joué par <b>Humbert Canot</b></i>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m9 l9">
+                <h4 class="right-align" id="nomOrganisateur">Le chef de cérémonie</h4>
+                <p class="right-align">
+                    Courtisan, complaisant, certains diront même rampant… Il compte bien garder son statut prestigieux, ses coupe-files dans les buffets et ses entrées dans les parties de chasses royales. Mais pour combien de temps un homme peut-il accepter l’humiliation et la brutalité d’un tyran Roi ?
+                    <br/>
+                    <i>Joué par <b>Humbert Canot</b></i>
+                </p>
+            </div>
+            <div class="col s12 m3 l3 center-on-small-only">
+                <div class="image-container">
+                    <img class="circle responsive-img" src="images/membres/ceremonie.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m3 l3 center-on-small-only">
+                <div class="image-container">
+                    <img class="circle responsive-img" src="images/membres/voix.jpg">
+                </div>
+            </div>
+            <div class="col s12 m9 l9">
+                <h4 id="nomOrganisateur">La voix (ou crieur public)</h4>
+                <p>
+                    Son « Allo, allo » retentissant a durablement traumatisé les générations d’enfants qui ont regardé « Le Roi et l’Oiseau ». Généralement présages de mauvais augure, ses messages se font porte-parole du pouvoir en place et ne sont donc pas aussi objectifs qu’ils n’y paraissent.
+                    <br/>
+                    <i>Joué par <b>Jasmine Castay</b></i>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m9 l9">
+                <h4 class="right-align" id="nomOrganisateur">La journaliste</h4>
+                <p class="right-align">
+                    Personnage ô combien extravagant mais difficile à cerner, la journaliste sera bien entendu là pour couvrir (plus ou moins fidèlement) l’évènement clef de l’histoire. Sous des apparences dociles, elle n’hésite pas à ironiser lorsqu’elle retranscrit les évènements. Après tout, elle fait simplement son métier, ni plus, ni moins, et n’a donc pas besoin de prendre parti quelle que soit la tournure des évènements.
+                    <br/>
+                    <i>Joué par <b>Jasmine Castay</b></i>
+                </p>
+            </div>
+            <div class="col s12 m3 l3 center-on-small-only">
+                <div class="image-container">
+                    <img class="circle responsive-img" src="images/membres/journaliste.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h3>La loi en Tachycardie</h3>
+            <h4>Article 1</h4>
+            <p>Il est interdit de parler du Royaume de Tachycardie.</p>
+            <h4>Article 2</h4>
+            <p>Il est INTERDIT de parler du Royaume de Tachycardie (parce que Prévert s'en retournerait dans sa tombe).</p>
+            <h4>Article 3</h4>
+            <p>Il est interdit de s'adresser à Sa Majesté le Roi Charles V et III font VIII et VIII font XVI en terme peu élogieux, sous peine de chasse à l'homme, travaux forcés et emprisonnement.</p>
+            <h4>Article 4</h4>
+            <p>Il est interdit de mentionner la taille de Sa Majesté le Roi Charles V et III font VIII et VIII font XVI en terme péjoratifs.</p>
+            <h4>Article 5</h4>
+            <p>Toutes les volontés de Sa Majesté le Roi Charles V et III font VIII et VIII font XVI doivent être réalisées dans les 24H sous peine de chasse à l'homme, travaux forcés et emprisonnement.</p>
+            <h4>Article 6</h4>
+            <p>Le Soleil réalise sa révolution autour de la Terre en 24H, sauf s'il y a des nouveaux.</p>
         </div>
     </main>
     <footer class="page-footer blue-grey">
@@ -80,11 +163,10 @@
             </div>
         </div>
     </footer>
-    
-
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/init.js"></script>
 
 </body>
 

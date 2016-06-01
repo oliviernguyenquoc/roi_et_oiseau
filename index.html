@@ -8,15 +8,16 @@
     <title>Le roi et l'oiseau</title>
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+    <link rel="icon" sizes="192x192" href="images/favicon.png">
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon.png">
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
+    <meta property="og:image" content="http://www.lesoiseauxcomedia.fr/images/fb-preview.jpg" />
     <link rel="shortcut icon" href="images/favicon.png">
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
@@ -25,22 +26,21 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="css/avgrund.css">
     <link rel="stylesheet" href="css/styles.css">
-
     <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
     <main class="blue-grey lighten-5">
         <nav class="blue-grey darken-2">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo center ">Le roi et l'oiseau : Choisis ton camp</a>
+                <a href="#!" class="brand-logo center truncate">Le roi et l'oiseau</a>
             </div>
         </nav>
-<!--         <div class="row title_bottom_no_space blue-grey">
+        <!--         <div class="row title_bottom_no_space blue-grey">
             <div class="col m4 offset-m1 center-align">
                 <h2>Le roi</h2>
             </div>
@@ -53,62 +53,50 @@
         </div> -->
         <div class="row top_space bottom_space blue-grey">
             <div class="col s4 m4 offset-m1 offset-s1">
-                <a href="roi.html"><img class="responsive-img" data-alt-src="images/Couronne_white.png" src="images/Couronne.png"></a>
+                <a href="roi.html"><img id="roi" class="responsive-img" data-alt-src="images/Couronne_white.png" src="images/Couronne.png"></a>
+                <h5 id="roi-link" class="center-align black-text link-index"><a href="roi.html">Je choisis le roi</a></h5>
             </div>
             <div class="col s4 m4 offset-m2 offset-s2">
-                <a href="oiseau.html"><img class="responsive-img" data-alt-src="images/oiseau_white.png" src="images/oiseau.png"></a>
+                <a href="oiseau.html"><img id="oiseau" class="responsive-img" data-alt-src="images/oiseau_white.png" src="images/oiseau.png"></a>
+                <h5 id="oiseau-link" class="center-align black-text link-index"><a href="oiseau.html">Je choisis l'oiseau</a></h5>
             </div>
         </div>
         <div class="row title_space container center-align">
             <h4 class="title_space">Le 01 et 06 Juin à l'ESSEC (GA) et le 08 Juin à Paris</h4>
         </div>
         <div class="row container title_bottom_no_space right-align">
-                <p><b>Un texte de Jacques Prévert</b><br/>adapté et mis en scène par Margot Vieux</p>
+            <p><b>Un texte de Jacques Prévert</b>
+                <br/>adapté et mis en scène par Margot Vieux</p>
         </div>
     </main>
     <footer id="footer_no_top" class="page-footer blue-grey">
         <div class="footer-copyright">
-            <div class="container">
+            <div class="container truncate">
                 Une pièce présentée par Comedia dell ESSEC et le Shamrock
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
+                <a href="http://www.leshamrock.com/"><img id="roi" class="circle responsive-img" data-alt-src="images/sham.jpeg" src="images/sham.jpeg" height="40px" width="40px"></a>
+                <!--                 <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
+
         </div>
     </footer>
-    
-
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-
     <script>
-        var sourceSwap = function () {
-            var $this = $(this);
-            var newSource = $this.data('alt-src');
-            $this.data('alt-src', $this.attr('src'));
-            $this.attr('src', newSource);
-        }
+    var sourceSwap = function() {
+        var $this = $(this);
+        var newSource = $this.data('alt-src');
+        $this.data('alt-src', $this.attr('src'));
+        $this.attr('src', newSource);
+    }
 
-        $(function() {
-            $('img[data-alt-src]').each(function() { 
-                new Image().src = $(this).data('alt-src'); 
-            }).hover(sourceSwap, sourceSwap); 
-        });
+    $(function() {
+        $('img[data-alt-src]').each(function() {
+            new Image().src = $(this).data('alt-src');
+        }).hover(sourceSwap, sourceSwap);
+    });
     </script>
-<!--     
     <script src="js/jquery.avgrund.min.js"></script>
-
-    <script>
-        $(document).avgrund({
-            height: 240,
-            holderClass: 'custom',
-            onBlurContainer: '.container',
-            showClose: true,
-            showCloseText: 'close',
-            openOnEvent: false,
-            template: '<h4>Ceci est une expérience musical !</h4> <div class="row"> <div class="col s3"><img class="responsive-img" src="images/music.jpg"></div> <div class="col s1"></div> <div class="col s8">DESACTIVER le son si vous êtes en publique (ou en cours ^^) ou mettez un casque. <br/><br/><b>Bon spectable !</b> </div> </div>' 
-        });
-    </script> -->
     <script type="text/javascript" src="js/materialize.min.js"></script>
-
+    <script src="js/init.js"></script>
 </body>
 
 </html>

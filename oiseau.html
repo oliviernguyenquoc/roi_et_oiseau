@@ -8,15 +8,16 @@
     <title>Le roi et l'oiseau</title>
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+    <link rel="icon" sizes="192x192" href="images/favicon.png">
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon.png">
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
+    <meta property="og:image" content="http://www.lesoiseauxcomedia.fr/images/fb-preview.jpg" />
     <link rel="shortcut icon" href="images/favicon.png">
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
@@ -25,17 +26,24 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="css/styles.css">
-
     <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <nav class="blue-grey darken-2">
-        <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo center ">Le roi et l'oiseau : Le roi</a>
+    <nav class="blue-grey darken-2" role="navigation">
+        <div class="nav-wrapper container"><a href="index.html" class="brand-logo">Le roi et l'oiseau</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="roi.html">Le roi</a></li>
+                <li><a href="critiques.html">Critiques</a></li>
+            </ul>
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="roi.html">Le roi</a></li>
+                <li><a href="critiques.html">Critiques</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
     </nav>
     <main class="container">
@@ -44,15 +52,15 @@
         <div class="row">
             <div class="col s12 m3 l3 center-on-small-only">
                 <div class="image-container">
-                    <img class="circle responsive-img" src="images/membres/le_roi.jpg">
+                    <img class="circle responsive-img" src="images/membres/oiseau.jpg">
                 </div>
             </div>
             <div class="col s12 m9 l9">
-                <h4 id="nomOrganisateur">Le ramoneur</h4>
+                <h4 id="nomOrganisateur">L’oiseau</h4>
                 <p>
-                    Jeune garçon enduit de suie et aux vêtements déguenillés doué d’un charme fou. Ce Gavroche qui n’a qu’un rêve : folâtrer dans les près avec la jolie bergère. Brutalement l’oppression du cruel et malfaisant Roi va bouleverser sa passion. Dans sa quête d’amour, il sera accompagné par son fidèle ami, l’Oiseau, qui le prendra sous son aile. En sortira-t-il vainqueur ?
+                    Polyglotte, globe-trotteur, et poète. Voilà ce qu’était l’oiseau jusqu’à un funeste jour de mai. Se mettre dans le passage d’un enfant gâté qui vide les caisses du Royaume, c’est une chose. Venger la mort de sa défunte épouse, c’en est une toute autre… En l’oiseau, ami protecteur des innocents, meneur de révolutions et harangueur de foules affamées, se cache-t-il quelque chose de plus sombre ?
                     <br/>
-                    <i>Joué par <b>Baptiste Lestrade</b></i>
+                    <i>Joué par <b>Barthélemy Héran</b></i>
                 </p>
             </div>
         </div>
@@ -60,14 +68,44 @@
             <div class="col s12 m9 l9">
                 <h4 class="right-align" id="nomOrganisateur">La bergère</h4>
                 <p class="right-align">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Une jeune et innocente fille qui n’avait qu’une seule hâte : celle de découvrir la beauté du monde avec son compagnon de pose et de vivre heureux jusqu’à la fin des temps. De préférence dans une belle prairie où il ne pleut jamais et tout le monde est très gentil. Rêve naïf, vœu pieu, trop de LSD ?
                     <br/>
-                    <i>Joué par <b>Olivier Nguyen</b></i>
+                    <i>Joué par <b>Soraya Douat</b></i>
                 </p>
             </div>
             <div class="col s12 m3 l3 center-on-small-only">
                 <div class="image-container">
-                    <img class="circle responsive-img" src="images/membres/le_roi.jpg">
+                    <img class="circle responsive-img" src="images/membres/bergere.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m3 l3 center-on-small-only">
+                <div class="image-container">
+                    <img class="circle responsive-img" src="images/membres/ramoneur.jpg">
+                </div>
+            </div>
+            <div class="col s12 m9 l9">
+                <h4 id="nomOrganisateur">Le ramoneur</h4>
+                <p>
+                    Jeune garçon enduit de suie et aux vêtements déguenillés doué d’un charme fou. Ce Gavroche qui n’a qu’un rêve : folâtrer dans les près avec la jolie bergère. Brutalement l’oppression du cruel et malfaisant Roi va bouleverser sa passion. Dans sa quête d’amour, il sera accompagné par son fidèle ami, l’Oiseau, qui le prendra sous son aile. En sortira-t-il vainqueur ?
+                    <br/>
+                    <i>Joué par <b>François Thauvin</b></i>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m9 l9">
+                <h4 class="right-align" id="nomOrganisateur">L'aveugle</h4>
+                <p class="right-align">
+                    "Dieu que la vie est belle" dira l'aveugle dans un monde à feu et à sang. Le monde, il ne le voit pas, il l'imagine, beau, ensoleillé, peuplé d'êtres bons et brillants. Et c'est là toute sa force, vivre sans voir, et donc sans savoir. Il traversera les épreuves canne en avant, cheveux au vent, sourire étincelant.
+                    <br/>
+                    <i>Joué par <b>Audrey De Batz</b></i>
+                </p>
+            </div>
+            <div class="col s12 m3 l3 center-on-small-only">
+                <div class="image-container">
+                    <img class="circle responsive-img" src="images/membres/aveugle.jpg">
                 </div>
             </div>
         </div>
@@ -76,16 +114,13 @@
         <div class="footer-copyright">
             <div class="container">
                 Une pièce présentée par Comedia dell ESSEC et le Shamrock
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
         </div>
     </footer>
-    
-
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-
+    <script src="js/init.js"></script>
 </body>
 
 </html>
